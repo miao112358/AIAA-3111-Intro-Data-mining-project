@@ -105,7 +105,7 @@ A 核实输入和预处理决策，对账最终排除，检查日期全集、窗
 
 B 用人工小样例覆盖反向、同向、持平、低流量、缺时窗、空事务、零分母、两尺度隔离和朝向一致性。C 独立计算期望值，并抽取真实聚合记录检查规则。
 
-验收：data_audit、coverage_review、字段字典、可执行测试及实际测试记录；无需预先找到“显著走廊”。
+A 的交付文件请查看\preprocessing_README.md
 
 ### E1 全年潮汐榜与热门榜
 
@@ -170,11 +170,11 @@ A 再用 parent_region 将 500 m 结果映射到 1 km 父格，用于解释而�
 
 E4c 只比较 1 km 与 500 m 的潮汐模式，不要求 A 再做 500 m 热门榜、E2 算法计时或留出验证。A 输出两尺度候选数、规则数、Top-k 父格对应关系、朝向与指标、父格对账结果，以及细格稀疏性和代表案例的解释。
 
-E4 验收：monthly_profile、holdout_evaluation、threshold_sensitivity、spatial_sensitivity，各含配置、版本、分子/分母及限制。不得预设必然稳定或必然存在失败案例。
+E4 交付文件，见到时候A上传的文档中对应的README.md
 
 ## 4 四人详细分工
 
-角色实名与 GitHub 账号在共享文档补齐；A/B/C/D 不代替正式报告中的姓名及学号。
+角色实名与 GitHub 账号在共享文档补齐；
 
 ### 4.1 唯一责任矩阵
 
@@ -204,8 +204,7 @@ E4 验收：monthly_profile、holdout_evaluation、threshold_sensitivity、spati
 **11/19–22：**运行原生 500 m 潮汐分析、父格结果映射和父格车次对账，完成 E4c 结果正文、限制和图注；与 C 各自提交至同一个 H3 manifest。A 负责自己文件的正确性；C 不负责汇总或重做 A 的分析。
 
 **之后：**审核地图和数据说明；12/09 前在干净环境按 README 验证提交包的完整流程。必要数据获取、预处理和各报告结果都应可追踪；最小测试通过不能替代完整复现。
-
-H1 文件：data_audit.md、coverage_review.csv、data_dictionary.md、data_methods.md。H3 文件：spatial_sensitivity.py、direction_events_500m.parquet、tidal_rules_500m.csv、tidal_topk_500m.csv、spatial_sensitivity.csv、parent_aggregation_audit.csv、spatial_results.md。12/09 文件：reproduction_check.md。
+相应的交付文件\preprocessiong\preprocessing_README.md 和之后的上传
 
 ### 4.3 B 方向事件 模式挖掘与阈值分析
 
