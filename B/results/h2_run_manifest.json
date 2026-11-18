@@ -1,0 +1,156 @@
+{
+  "status": "completed",
+  "data_mode": "observed_data_only",
+  "denominator_type": "observed_days",
+  "coverage_status": "unknown",
+  "parameters": {
+    "n_min": 10,
+    "p_min": 0.6666666666666666,
+    "min_support": 0.1,
+    "max_len": 2,
+    "top_k": 10
+  },
+  "sensitivity": [
+    {
+      "name": "Main",
+      "n_min": 10,
+      "p_min": 0.6666666666666666
+    },
+    {
+      "name": "S1_n5",
+      "n_min": 5,
+      "p_min": 0.6666666666666666
+    },
+    {
+      "name": "S2_n20",
+      "n_min": 20,
+      "p_min": 0.6666666666666666
+    },
+    {
+      "name": "S3_p060",
+      "n_min": 10,
+      "p_min": 0.6
+    },
+    {
+      "name": "S4_p075",
+      "n_min": 10,
+      "p_min": 0.75
+    }
+  ],
+  "development_holdout_separated": true,
+  "holdout_used_for_selection": false,
+  "python": "3.14.6 (v3.14.6:c63aec69bd5, Jun 10 2026, 08:07:54) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "pandas": "3.1.1",
+  "mlxtend": "0.25.0",
+  "inputs": {
+    "1000": {
+      "od_path": "/Users/miles/Patter_Mining/preprocessing/necessary data/od_windows.parquet",
+      "coverage_path": "/Users/miles/Patter_Mining/preprocessing/necessary data/date_coverage.csv",
+      "regions_path": "/Users/miles/Patter_Mining/preprocessing/necessary data/regions.parquet",
+      "filtered_weekday_am_pm_rows": 1990303,
+      "unique_corridors": 19705
+    },
+    "500": {
+      "od_path": "/Users/miles/Patter_Mining/preprocessing/necessary data/od_windows.parquet",
+      "coverage_path": "/Users/miles/Patter_Mining/preprocessing/necessary data/date_coverage.csv",
+      "regions_path": "/Users/miles/Patter_Mining/preprocessing/necessary data/regions.parquet",
+      "filtered_weekday_am_pm_rows": 5953131,
+      "unique_corridors": 135224
+    }
+  },
+  "cohorts": {
+    "1000": {
+      "full_year_observed_weekdays": 261,
+      "development_observed_weekdays": 195,
+      "holdout_observed_weekdays": 66,
+      "coverage_status_values": [
+        "unknown"
+      ],
+      "import_complete_dates": 365
+    },
+    "500": {
+      "full_year_observed_weekdays": 261,
+      "development_observed_weekdays": 195,
+      "holdout_observed_weekdays": 66,
+      "coverage_status_values": [
+        "unknown"
+      ],
+      "import_complete_dates": 365
+    }
+  },
+  "e1": {
+    "status": "completed",
+    "year_candidate_corridors": 859,
+    "development_candidate_corridors": 829,
+    "year_tidal_rules": 1165,
+    "development_tidal_rules": 1082,
+    "year_rules_passing_minsup": 244,
+    "development_rules_passing_minsup": 253,
+    "all_year_topk_rows": 10,
+    "development_topk_rows": 10,
+    "holdout_evaluated_rules": 10,
+    "year_min_support_count": 27,
+    "development_min_support_count": 20
+  },
+  "e2": {
+    "status": "completed",
+    "eligible_corridors": 829,
+    "consistency_corridors": 829,
+    "all_consistent": true,
+    "corridor_day_empty_transactions": 94086,
+    "elapsed_seconds": 20.178872540942393,
+    "min_support": 0.1,
+    "max_len": 2,
+    "all_frequent_itemset_rows": 4050,
+    "reversal_itemset_rows": 759,
+    "reversal_patterns_consistent": true,
+    "minimum_support_count": 20
+  },
+  "e4b": {
+    "status": "completed",
+    "experiments": [
+      {
+        "name": "Main",
+        "n_min": 10,
+        "p_min": 0.6666666666666666
+      },
+      {
+        "name": "S1_n5",
+        "n_min": 5,
+        "p_min": 0.6666666666666666
+      },
+      {
+        "name": "S2_n20",
+        "n_min": 20,
+        "p_min": 0.6666666666666666
+      },
+      {
+        "name": "S3_p060",
+        "n_min": 10,
+        "p_min": 0.6
+      },
+      {
+        "name": "S4_p075",
+        "n_min": 10,
+        "p_min": 0.75
+      }
+    ],
+    "result_rows": 5,
+    "development_days": 195
+  },
+  "scale_500m_smoke": {
+    "status": "completed",
+    "weekday_observed_days": 261,
+    "unique_corridors": 135224,
+    "sample_rows": 5000,
+    "valid_direction_decisions": 50,
+    "fixed_orientation_check": "passed",
+    "separate_scale": "500m; not combined with 1000m"
+  },
+  "elapsed_seconds": 188.08610974892508,
+  "python_executable": "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+  "pyarrow": "26.0.0",
+  "environment_note": "Ran with the system Python 3.14.6 interpreter; project .venv site-packages were added to PYTHONPATH for pandas 3.1.1 and mlxtend 0.25.0, while system pyarrow 26.0.0 provided parquet I/O. No global packages were installed or changed.",
+  "e2_audit_replay_seconds": 20.178872540942393
+}

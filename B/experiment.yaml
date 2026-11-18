@@ -1,0 +1,37 @@
+status: candidate_pending_C_review
+candidate_parameters:
+  primary_grid_size_m: 1000
+  sensitivity_grid_size_m: 500
+  n_min: 10
+  p_min: 0.6666666666666666
+  min_support: 0.10
+  max_len: 2
+  top_k: 10
+  benchmark_repeats: 3
+  development: {start: '2025-01-01', end: '2025-09-30'}
+  holdout: {start: '2025-10-01', end: '2025-12-31'}
+  main_analysis: {day_type: weekday, windows: [AM, PM], period: full_year}
+sensitivity_parameters:
+  n_min: [5, 10, 20]
+  p_min: [0.60, 0.6666666666666666, 0.75]
+sensitivity_runs:
+  - {name: Main, n_min: 10, p_min: 0.6666666666666666}
+  - {name: S1_n5, n_min: 5, p_min: 0.6666666666666666}
+  - {name: S2_n20, n_min: 20, p_min: 0.6666666666666666}
+  - {name: S3_p060, n_min: 10, p_min: 0.60}
+  - {name: S4_p075, n_min: 10, p_min: 0.75}
+candidate_status: pending_C_review
+statistical_basis:
+  denominator_type: observed_days
+  included_dates: import_complete_true_weekdays
+  coverage_status: unknown
+  coverage_unknown_is_exclusion: false
+  absent_corridor_window_od_key: zero_observed_rides_only
+  zero_observed_is_real_world_zero: false
+  explicit_nulls_import_failures_duplicate_keys: error
+  observed_weekdays: {full_year: 261, development: 195, holdout: 66}
+notes:
+  - Candidate values are not final until C review.
+  - Holdout is evaluation-only for frozen Development rules and cannot select parameters or Development candidates.
+  - Full-year Top-10 includes Holdout dates and is descriptive only.
+  - 500m has a real-data smoke test only; it is not a full-scale H2 experiment.
