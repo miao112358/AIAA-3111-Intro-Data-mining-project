@@ -1,0 +1,11 @@
+[2026-11-18T16:09:46+08:00] Loading and validating real 1000m inputs
+[2026-11-18T16:10:13+08:00] 1000m dates: all=261 development=195 holdout=66; data keys=1990303
+[2026-11-18T16:10:32+08:00] Running three-algorithm Development comparison on 829 eligible corridors
+[2026-11-18T16:10:52+08:00] Running five Development-only threshold sensitivity configurations
+[2026-11-18T16:10:59+08:00] Loading and validating real 500m inputs
+[2026-11-18T16:12:29+08:00] 500m dates: all=261 development=195 holdout=66; data keys=5953131
+[2026-11-18T16:12:34+08:00] H2 run ended: completed; elapsed=167.9s
+
+[2026-11-18] Post-run audit: normalized the all-itemset algorithm output into algorithm_itemsets_all.csv and emitted the requested reversal-only algorithm_comparison.csv; consistency was recomputed from actual persisted support-count rows for all 829 Development candidate corridors. No algorithms were rerun and no input data were changed.
+
+[2026-11-18] E2 audit rerun from persisted real 1000m Development direction events: 829 corridors, elapsed 20.179s; primary comparison filtered to frequent same-corridor AM-to-PM reversal pairs.
