@@ -5,7 +5,7 @@
   "started_at_utc": "2026-11-19T03:11:33.993181+00:00",
   "finished_at_utc": "2026-11-19T03:11:35.726730+00:00",
   "source_repository_commit": "702f2527a9f8adf9df980828841c5d75cc6f8f81",
-  "member_c_code_commit": null,
+  "member_c_code_commit": "1b4ca73a8a18f310f70a34dfd649cef310edecf8",
   "data_mode": "observed_data_only",
   "coverage_status": "unknown",
   "development_holdout_separated": true,
