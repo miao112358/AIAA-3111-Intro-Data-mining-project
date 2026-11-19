@@ -1,0 +1,246 @@
+{
+  "status": "completed",
+  "member": "C",
+  "analysis_version": "1.0",
+  "started_at_utc": "2026-11-19T03:11:33.993181+00:00",
+  "finished_at_utc": "2026-11-19T03:11:35.726730+00:00",
+  "source_repository_commit": "702f2527a9f8adf9df980828841c5d75cc6f8f81",
+  "member_c_code_commit": null,
+  "data_mode": "observed_data_only",
+  "coverage_status": "unknown",
+  "development_holdout_separated": true,
+  "holdout_used_for_selection": false,
+  "parameters": {
+    "grid_size_m": 1000,
+    "n_min": 10,
+    "p_min": 0.6666666666666666,
+    "min_support": 0.1,
+    "top_k": 10
+  },
+  "environment": {
+    "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:12:32) [Clang 20.1.8 ]",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "pandas": "2.2.2",
+    "pyarrow": "21.0.0"
+  },
+  "summaries": {
+    "volume": {
+      "full_year_candidate_corridors": 859,
+      "observed_weekdays": 261,
+      "volume_topk_rows": 10,
+      "tidal_topk_rows": 10,
+      "top10_overlap_count": 0,
+      "top10_overlap_share_of_10": 0.0,
+      "top10_jaccard": 0.0,
+      "highest_volume_corridor": "utm18n_o0_v1:1000:585:4508<->utm18n_o0_v1:1000:585:4509",
+      "highest_volume_total_rides": 91391
+    },
+    "context": {
+      "corridors": 10,
+      "rows": 30,
+      "context_means": [
+        {
+          "context": "weekday_AM_to_MID",
+          "mean_support": 0.08314176245210728,
+          "median_support": 0.07279693486590039,
+          "total_joint_days": 217,
+          "total_rides": 171984
+        },
+        {
+          "context": "weekday_AM_to_PM",
+          "mean_support": 0.8800766283524905,
+          "median_support": 0.8850574712643678,
+          "total_joint_days": 2297,
+          "total_rides": 276213
+        },
+        {
+          "context": "weekend_AM_to_PM",
+          "mean_support": 0.025961538461538463,
+          "median_support": 0.014423076923076924,
+          "total_joint_days": 27,
+          "total_rides": 32899
+        }
+      ],
+      "weekend_support_lower_corridors": 10,
+      "mid_support_lower_corridors": 10,
+      "b_full_year_topk_cross_check": "passed"
+    },
+    "temporal": {
+      "monthly_rows": 120,
+      "monthly_corridors": 10,
+      "holdout_rows": 10,
+      "holdout_observed_weekdays": 66,
+      "holdout_min_support_count": 7,
+      "reproduction_status_counts": {
+        "reproduced_same_orientation": 10
+      },
+      "b_holdout_cross_check": "passed",
+      "mean_holdout_support": 0.8166666666666667,
+      "mean_development_support": 0.9015384615384615
+    }
+  },
+  "inputs": [
+    {
+      "path": "preprocessing/necessary data/od_windows.parquet",
+      "sha256": "bbc98d85f83f5e4d4bf84fe6ebd0b9ef14ab468952fcebb22472ca5195e68d49",
+      "size_bytes": 36377643
+    },
+    {
+      "path": "preprocessing/necessary data/date_coverage.csv",
+      "sha256": "7cde0e1ec0007d719082578fe0b6f8109a54988b2f04d9d8b9e1a28e4d08340d",
+      "size_bytes": 107416
+    },
+    {
+      "path": "preprocessing/necessary data/regions.parquet",
+      "sha256": "8c118b8657667fdbdb70b5db43f269945dde83f069a5ff53fb06891ff7ee843f",
+      "size_bytes": 33462
+    },
+    {
+      "path": "B/results/direction_events_1000m.parquet",
+      "sha256": "3acddad2a8476b507315764f7addbdeb4e3e0a605d26463a5cd711a2d18ff5c3",
+      "size_bytes": 1803578
+    },
+    {
+      "path": "B/results/candidate_corridors.csv",
+      "sha256": "be49d33ceb69a38e02d8d1eb69a9e6432bc5b22b47457dd92c4881fc2c43d472",
+      "size_bytes": 1052819
+    },
+    {
+      "path": "B/results/all_year_tidal_topk.csv",
+      "sha256": "fc50795cfdf0e274fed88e8efe0eb572bd722cb563e4633dfb0f3cb441b267fe",
+      "size_bytes": 117234
+    },
+    {
+      "path": "B/results/development_tidal_topk.csv",
+      "sha256": "d6e0f0eccede3fb5b6207d3022bd6c9a53ef1ee1394bbc58c6c5163b4f98c710",
+      "size_bytes": 90396
+    },
+    {
+      "path": "B/results/holdout_topk_evaluation.csv",
+      "sha256": "d59fb1d22ed70adc862e8f09e5c1ab1d54c628ae9874b2a0ee67aaddf798154d",
+      "size_bytes": 2943
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "C/.gitignore",
+      "sha256": "63eddd28d1afe2b03909e48eb4624f3767e0c986b61b901c50eeed802ed01ac6",
+      "size_bytes": 20
+    },
+    {
+      "path": "C/README.md",
+      "sha256": "ddda2e8f7998ea2b1dabc7a5ec153a45f95283b9f0ab4550e6d411126471ca7f",
+      "size_bytes": 2287
+    },
+    {
+      "path": "C/parameter_review.md",
+      "sha256": "a44e91624563e0394c9fdf0609b2669b115c23c46ec2ca0153fad69f1099ddf8",
+      "size_bytes": 1128
+    },
+    {
+      "path": "C/requirements.txt",
+      "sha256": "39afd36a17f842669bc9bb337c7795bac4808f6f3489539b061a8a19be7149ab",
+      "size_bytes": 38
+    },
+    {
+      "path": "C/results/C_handoff.md",
+      "sha256": "0fcc4bb41b7f13ce54aec0a9f4beaf1ad4f1b1ac37fa10af11af58af42f1b061",
+      "size_bytes": 596
+    },
+    {
+      "path": "C/results/all_year_volume_topk.csv",
+      "sha256": "a5a46996d71c99b6a1bd2d220bcdf692d450cf7847caa3fcb5234855cde82f7f",
+      "size_bytes": 3280
+    },
+    {
+      "path": "C/results/case_notes.md",
+      "sha256": "a7bb69d1239e7441e9b48cb3b703cd2af7cd15f1981f3bc6ff6ff96a66e79aab",
+      "size_bytes": 1137
+    },
+    {
+      "path": "C/results/context_comparison.csv",
+      "sha256": "26a8f14487e13f864ea16319f3bf3666317d9fb1b33e062a6f29105e8b55c52b",
+      "size_bytes": 38271
+    },
+    {
+      "path": "C/results/context_summary.json",
+      "sha256": "530dabf722245f0d491fb3f111549509995582a49e57a5d2425b803d4b1f258f",
+      "size_bytes": 774
+    },
+    {
+      "path": "C/results/holdout_evaluation.csv",
+      "sha256": "b8bf4e078e7fe1c25f73906d91769dec95e9f076adf5df4d4866dfa9d90807a6",
+      "size_bytes": 5159
+    },
+    {
+      "path": "C/results/limitations.md",
+      "sha256": "b28b692697df85f12aee1fcc952a715fd6f4c05504c338d7d80e2d01070b1815",
+      "size_bytes": 1487
+    },
+    {
+      "path": "C/results/monthly_profile.csv",
+      "sha256": "5e5ab9d21f9ba777131a092d205cc4765b35a4ad6dc24ddd8203b88bb911f0cb",
+      "size_bytes": 63219
+    },
+    {
+      "path": "C/results/ranking_comparison.csv",
+      "sha256": "4520e0d6e395b6d72859ae1ed83a074b675cf8601a2f02440b512aed69ff546e",
+      "size_bytes": 9560
+    },
+    {
+      "path": "C/results/ranking_summary.json",
+      "sha256": "f0fdc34a012d6b8485a64f855f0067e04d734a422ca849b3070ab18bc6b6de9b",
+      "size_bytes": 337
+    },
+    {
+      "path": "C/results/results.md",
+      "sha256": "fcc033d9b8de8425b9addf31750fb772322812dc3f4f44dae0e4fbcb67ce3f4e",
+      "size_bytes": 2797
+    },
+    {
+      "path": "C/results/temporal_summary.json",
+      "sha256": "d7953e50270494f14b9e803821278dcf5f674790e036026767386084f941585a",
+      "size_bytes": 354
+    },
+    {
+      "path": "C/results/verification_notes.md",
+      "sha256": "91d1dd53621aa355460c596c66964c8bc8e318a21dc51bddd21c3dd25138350f",
+      "size_bytes": 2983
+    },
+    {
+      "path": "C/src/common.py",
+      "sha256": "b7e636831952448c327cf9de0568a2c815ca5de56d01ed600a92dbe4a83a32f3",
+      "size_bytes": 11013
+    },
+    {
+      "path": "C/src/context_analysis.py",
+      "sha256": "0c8a6c24debed607e69c1014243010c78947b8c379c77334d1d09326e1cb71c9",
+      "size_bytes": 4844
+    },
+    {
+      "path": "C/src/run_member_c.py",
+      "sha256": "e4bb4e5bffa638bf766d7baa94eda6ad9a52fb385b24512248bcaf1b64b21ee3",
+      "size_bytes": 17567
+    },
+    {
+      "path": "C/src/temporal_validation.py",
+      "sha256": "ee0fa7f29652e82ac18bcbf7cf87440234bfae36c246ec9536396d8f5fa8d180",
+      "size_bytes": 8014
+    },
+    {
+      "path": "C/src/volume_baseline.py",
+      "sha256": "ee11f99b1b6d8f9e367b9fb3b68dba5885ab34f7936ad3144fc5dda98fc1b625",
+      "size_bytes": 7309
+    },
+    {
+      "path": "C/tests/test_member_c.py",
+      "sha256": "ab816fd8547edc67780431384ec6f722ff38d2eef060847576dbdab88fffbed2",
+      "size_bytes": 3480
+    },
+    {
+      "path": "B/experiment.yaml",
+      "sha256": "0556f5be6420a8342adaac578513558f3cfba222c557754e52b6dd7079eb31e1",
+      "size_bytes": 1686
+    }
+  ]
+}

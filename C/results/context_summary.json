@@ -1,0 +1,30 @@
+{
+  "corridors": 10,
+  "rows": 30,
+  "context_means": [
+    {
+      "context": "weekday_AM_to_MID",
+      "mean_support": 0.08314176245210728,
+      "median_support": 0.07279693486590039,
+      "total_joint_days": 217,
+      "total_rides": 171984
+    },
+    {
+      "context": "weekday_AM_to_PM",
+      "mean_support": 0.8800766283524905,
+      "median_support": 0.8850574712643678,
+      "total_joint_days": 2297,
+      "total_rides": 276213
+    },
+    {
+      "context": "weekend_AM_to_PM",
+      "mean_support": 0.025961538461538463,
+      "median_support": 0.014423076923076924,
+      "total_joint_days": 27,
+      "total_rides": 32899
+    }
+  ],
+  "weekend_support_lower_corridors": 10,
+  "mid_support_lower_corridors": 10,
+  "b_full_year_topk_cross_check": "passed"
+}

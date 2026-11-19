@@ -1,0 +1,13 @@
+{
+  "monthly_rows": 120,
+  "monthly_corridors": 10,
+  "holdout_rows": 10,
+  "holdout_observed_weekdays": 66,
+  "holdout_min_support_count": 7,
+  "reproduction_status_counts": {
+    "reproduced_same_orientation": 10
+  },
+  "b_holdout_cross_check": "passed",
+  "mean_holdout_support": 0.8166666666666667,
+  "mean_development_support": 0.9015384615384615
+}

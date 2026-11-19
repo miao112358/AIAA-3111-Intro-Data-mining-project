@@ -1,0 +1,11 @@
+{
+  "full_year_candidate_corridors": 859,
+  "observed_weekdays": 261,
+  "volume_topk_rows": 10,
+  "tidal_topk_rows": 10,
+  "top10_overlap_count": 0,
+  "top10_overlap_share_of_10": 0.0,
+  "top10_jaccard": 0.0,
+  "highest_volume_corridor": "utm18n_o0_v1:1000:585:4508<->utm18n_o0_v1:1000:585:4509",
+  "highest_volume_total_rides": 91391
+}

@@ -1,4 +1,4 @@
-status: candidate_pending_C_review
+status: approved_by_C_for_observed_data_analysis
 candidate_parameters:
   primary_grid_size_m: 1000
   sensitivity_grid_size_m: 500
@@ -20,7 +20,7 @@ sensitivity_runs:
   - {name: S2_n20, n_min: 20, p_min: 0.6666666666666666}
   - {name: S3_p060, n_min: 10, p_min: 0.60}
   - {name: S4_p075, n_min: 10, p_min: 0.75}
-candidate_status: pending_C_review
+candidate_status: approved_by_C_for_observed_data_analysis
 statistical_basis:
   denominator_type: observed_days
   included_dates: import_complete_true_weekdays
@@ -31,7 +31,8 @@ statistical_basis:
   explicit_nulls_import_failures_duplicate_keys: error
   observed_weekdays: {full_year: 261, development: 195, holdout: 66}
 notes:
-  - Candidate values are not final until C review.
+  - Member C approved the candidate values for the explicitly labeled observed-data analysis.
+  - Approval does not convert unknown source coverage into complete real-world coverage.
   - Holdout is evaluation-only for frozen Development rules and cannot select parameters or Development candidates.
   - Full-year Top-10 includes Holdout dates and is descriptive only.
   - 500m has a real-data smoke test only; it is not a full-scale H2 experiment.
