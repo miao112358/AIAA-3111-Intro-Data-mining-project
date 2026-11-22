@@ -1,0 +1,13 @@
+{
+  "parameter_status": "candidate_pending_C_review",
+  "n_min": 10,
+  "p_min": 0.6666666666666666,
+  "min_support": 0.1,
+  "top_k": 10,
+  "day_type": "weekday",
+  "windows": ["AM", "PM"],
+  "period": "full_year",
+  "denominator_type": "observed_days",
+  "coverage_status": "unknown",
+  "missing_od_key": "zero_observed_rides"
+}

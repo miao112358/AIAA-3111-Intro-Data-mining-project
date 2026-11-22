@@ -1,0 +1,63 @@
+{
+  "data_dir": "/Users/wuyuhe/Desktop/26-27 fall/data mining/Project/data/processed/20261111T024449780084Z_8696edd7",
+  "parameter_status": "candidate_pending_C_review",
+  "parameters": {
+    "n_min": 10,
+    "p_min": 0.6666666666666666,
+    "min_support": 0.1,
+    "top_k": 10
+  },
+  "cohort": {
+    "day_type": "weekday",
+    "windows": [
+      "AM",
+      "PM"
+    ],
+    "observed_days": 261,
+    "denominator_type": "observed_days",
+    "coverage_status": "unknown"
+  },
+  "baseline_1km": "recomputed in memory from the same local OD input used by 500m",
+  "candidate_corridors": {
+    "500m": 996,
+    "1000m": 859
+  },
+  "reversal_rules": {
+    "500m_candidates": 1349,
+    "500m_passing_min_support": 138,
+    "1000m_candidates": 1165,
+    "1000m_passing_min_support": 244
+  },
+  "top_k": {
+    "500m_rows": 10,
+    "1000m_rows": 10,
+    "500m_internal_parent_corridors": 1,
+    "mapped_parent_corridor_overlap_count": 2,
+    "mapped_parent_corridor_jaccard": 0.125,
+    "direction_comparable_rows": 8,
+    "direction_match_count": 8,
+    "direction_match_rate": 1.0,
+    "rank_change_comparable_rows": 3,
+    "mean_absolute_rank_change": 4.333333333333333,
+    "rank_changes_500m_minus_1000m": [
+      -6,
+      -5,
+      2
+    ],
+    "parent_corridors_with_mixed_500m_directions": 0,
+    "500m_topk_parent_not_in_1000m_topk": 6
+  },
+  "parent_count_reconciliation": {
+    "compared_rows": 2784217,
+    "matched_rows": 2784217,
+    "mismatched_rows": 0,
+    "total_absolute_count_difference": 0
+  },
+  "outputs": [
+    "1.csv",
+    "2.csv",
+    "3.csv",
+    "4.csv",
+    "statistics.json"
+  ]
+}
